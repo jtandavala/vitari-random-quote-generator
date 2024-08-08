@@ -5,6 +5,7 @@ In this repository, I set up a modern Python workflow using the bellows tecnolog
 ### Good practice
 - TDD
 - github action
+- codecov.io
 
 ### Packages and Libs
 
