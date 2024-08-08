@@ -22,13 +22,19 @@ jobs:
       - name: Install dependencies
         run: poetry install
       - name: Run tests
-        run: poetry run pytest --cov=./ --cov-report=xml
+        run: poetry run pytest --cov=./ --cov-report=xml --junitxml=junit.xml
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
           verbose: true
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Upload test results to Codecov
+        if: ${{ !cancelled() }}
+        uses: codecov/test-results-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
 
   code-quality:
     strategy:
