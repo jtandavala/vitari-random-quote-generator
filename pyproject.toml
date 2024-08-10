@@ -6,6 +6,10 @@ authors = ["tandavala <tandavala.investidor@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 
+packages = [
+    { include = "random_quote_generator" }
+]
+
 [tool.poetry.dependencies]
 python = "^3.11"
 
@@ -22,3 +26,4 @@ safety = "^3.2.4"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+

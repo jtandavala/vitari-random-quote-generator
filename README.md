@@ -2,10 +2,11 @@
 
 In this repository, I set up a modern Python workflow using the bellows tecnologies
 
-### Good practice
+### Toolings and Best Practice
 - TDD
 - github action
 - codecov.io
+- readthedocs.io
 
 ### Packages and Libs
 
